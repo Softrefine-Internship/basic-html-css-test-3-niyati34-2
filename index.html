@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SKSFunding Dashboard</title>
+    <title>SKS Funding Dashboard</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -148,14 +148,23 @@
             </div>
 
             <div class="profile-completion-card">
-              <div class="progress-ring" style="--progress: 75">
-                <div class="cap-dot start-dot"></div>
-                <div class="cap-dot end-dot"></div>
-                <div class="middle-circle">
-                  <div class="inner-circle">
-                    <span>75%</span>
-                  </div>
-                </div>
+              <div class="progress-container">
+                <svg class="progress-ring">
+                  <circle
+                    class="progress-ring-bg"
+                    cx="63"
+                    cy="62"
+                    r="50"
+                  ></circle>
+                  <circle
+                    class="progress-ring-progress"
+                    cx="63"
+                    cy="62"
+                    r="50"
+                  ></circle>
+                </svg>
+                <div class="progress-inner-circle"></div>
+                <div class="progress-text">75%</div>
               </div>
               <div class="profile-text">
                 <h3>Profile Completion</h3>
@@ -170,51 +179,42 @@
       <div class="main-content-area">
         <aside class="sidebar">
           <section class="user-details-section">
-            <h4>ABOUT MY FAMILY</h4>
-            <div class="avatar-group">
-              <img src="images/avatar-family-1.jpg" alt="Family Member 1" />
-              <img src="images/avatar-family-2.jpg" alt="Family Member 2" />
-              <img src="images/avatar-family-3.jpg" alt="Family Member 3" />
-              <img src="images/avatar-family-4.jpg" alt="Family Member 4" />
+            <div class="sidebar-heading">
+              <p>ABOUT MY FAMILY</p>
+              <p>...</p>
             </div>
             <h4>COVERED PERSONS</h4>
             <div class="avatar-group">
-              <img src="images/avatar-covered-1.jpg" alt="Covered Person 1" />
-              <img src="images/avatar-covered-2.jpg" alt="Covered Person 2" />
-              <img src="images/avatar-covered-3.jpg" alt="Covered Person 3" />
+              <img src="images/person1.jpg" alt="Covered Person 1" />
+              <img src="images/person3.jpg" alt="Covered Person 2" />
             </div>
             <h4>BENEFICIARY PERSONS</h4>
             <div class="avatar-group">
-              <img
-                src="images/avatar-beneficiary-1.jpg"
-                alt="Beneficiary Person 1"
-              />
-              <img
-                src="images/avatar-beneficiary-2.jpg"
-                alt="Beneficiary Person 2"
-              />
+              <img src="images/person4.jpg" alt="Beneficiary Person 3" />
+              <img src="images/person5.jpg" alt="Beneficiary Person 1" />
+              <img src="images/person6.jpg" alt="Beneficiary Person 2" />
             </div>
             <h4>EMERGENCY PERSONS</h4>
             <div class="avatar-group">
-              <img
-                src="images/avatar-emergency-1.jpg"
-                alt="Emergency Person 1"
-              />
-              <img
-                src="images/avatar-emergency-2.jpg"
-                alt="Emergency Person 2"
-              />
-              <img
-                src="images/avatar-emergency-3.jpg"
-                alt="Emergency Person 3"
-              />
+              <img src="images/person7.jpg" alt="Emergency Person 1" />
+              <img src="images/person8.jpg" alt="Emergency Person 2" />
+              <img src="images/person9.jpg" alt="Emergency Person 3" />
+              <img src="images/person10.jpg" alt="Emergency Person 3" />
             </div>
-            <h4>ABOUT ME</h4>
+            <div class="sidebar-heading">
+              <p>ABOUT ME</p>
+              <p>...</p>
+            </div>
             <div class="about-me-details">
+              <p>EMAIL</p>
               <p>skp.emmaj123@gmail.com</p>
+              <p>PHONE</p>
               <p>+91 9977544643</p>
+              <p>ADDRESS</p>
               <p>Po Box 2133 Linden, NJ 07036 (USA)</p>
+              <p>PLAN</p>
               <p>$100</p>
+              <p>JOINED</p>
               <p>Mon 22nd Feb 2019</p>
             </div>
           </section>
@@ -256,10 +256,10 @@
               <div class="start-part-right">
                 <span class="stat-label">NEW CLAIMS</span>
                 <div class="stat-avatars">
-                  <img src="images/stat-avatar-1.jpg" alt="Avatar 1" />
-                  <img src="images/stat-avatar-2.jpg" alt="Avatar 2" />
-                  <img src="images/stat-avatar-3.jpg" alt="Avatar 3" />
-                  <img src="images/stat-avatar-3.jpg" alt="Avatar 3" />
+                  <img src="images/person1.jpg" alt="Avatar 1" />
+                  <img src="images/person4.jpg" alt="Avatar 2" />
+                  <img src="images/person3.jpg" alt="Avatar 3" />
+                  <img src="images/+32.jpg" alt="Avatar 3" />
                 </div>
               </div>
             </div>
@@ -270,10 +270,10 @@
               <div class="start-part-right">
                 <span class="stat-label">NEW MEMBERS</span>
                 <div class="stat-avatars">
-                  <img src="images/stat-avatar-4.jpg" alt="Avatar 4" />
-                  <img src="images/stat-avatar-5.jpg" alt="Avatar 5" />
-                  <img src="images/stat-avatar-6.jpg" alt="Avatar 6" />
-                  <img src="images/stat-avatar-3.jpg" alt="Avatar 3" />
+                  <img src="images/person5.jpg" alt="Avatar 4" />
+                  <img src="images/person6.jpg" alt="Avatar 5" />
+                  <img src="images/person7.jpg" alt="Avatar 6" />
+                  <img src="images/+32.jpg" alt="Avatar 3" />
                 </div>
               </div>
             </div>
@@ -284,10 +284,10 @@
               <div class="start-part-right">
                 <span class="stat-label">TOTAL CLAIMS</span>
                 <div class="stat-avatars">
-                  <img src="images/stat-avatar-7.jpg" alt="Avatar 7" />
-                  <img src="images/stat-avatar-8.jpg" alt="Avatar 8" />
-                  <img src="images/stat-avatar-9.jpg" alt="Avatar 9" />
-                  <img src="images/stat-avatar-3.jpg" alt="Avatar 3" />
+                  <img src="images/person8.jpg" alt="Avatar 7" />
+                  <img src="images/person9.jpg" alt="Avatar 8" />
+                  <img src="images/person10.jpg" alt="Avatar 9" />
+                  <img src="images/+32.jpg" alt="Avatar 3" />
                 </div>
               </div>
             </div>
@@ -297,34 +297,59 @@
             <div class="claims-list">
               <div class="claim-item">
                 <img
-                  src="images/claim-avatar-1.jpg"
+                  src="images/person5.jpg"
                   alt="Amelia Kimani"
                   class="claim-avatar"
                 />
                 <div class="claim-details">
                   <div class="claim-name">AMELIA KIMANI</div>
                   <div class="claim-info">
-                    <span>Filed: Thu, Jul 19, 2018 7:30 PM EST</span>
-                    <span>Due: Wed, Jul 25, 2018 10:00 PM</span>
-                    <span>Address: 140 Hwadamdira</span>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-plus"></i>
+                      <p>Filed -</p>
+                      Thu, Jul 19, 2018 7:30 PM EST
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-days"></i>
+                      <p>Due -</p>
+                      Wed, Jul 25, 2018 10:00 PM
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <p>Address -</p>
+                      140 Hwadamdira
+                    </div>
                   </div>
                 </div>
+
                 <button class="view-btn">
                   <i class="fa-solid fa-money-bill-wave"></i>PAY
                 </button>
               </div>
               <div class="claim-item">
                 <img
-                  src="images/claim-avatar-2.jpg"
+                  src="images/person6.jpg"
                   alt="Genevieve Juma"
                   class="claim-avatar"
                 />
                 <div class="claim-details">
                   <div class="claim-name">GENEVIEVE JUMA</div>
                   <div class="claim-info">
-                    <span>Filed: Mon, Jun 17, 2019 7:30 PM</span>
-                    <span>Due: Wed, Jul 25, 2018 10:00 PM</span>
-                    <span>Address: 140 Hwadamdira</span>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-plus"></i>
+                      <p>Filed -</p>
+                      Mon, Jun 17, 2019 7:30 PM
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-days"></i>
+                      <p>Due -</p>
+                      Wed, Jul 25, 2018 10:00 PM
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <p>Address -</p>
+                      140 Hwadamdira
+                    </div>
                   </div>
                 </div>
                 <button class="view-btn">
@@ -333,16 +358,28 @@
               </div>
               <div class="claim-item">
                 <img
-                  src="images/claim-avatar-3.jpg"
+                  src="images/person7.jpg"
                   alt="Theodore Wachira"
                   class="claim-avatar"
                 />
                 <div class="claim-details">
                   <div class="claim-name">THEODORE WACHIRA</div>
                   <div class="claim-info">
-                    <span>Filed: Thu, Jul 19, 2018 7:30 PM</span>
-                    <span>Due: Wed, Jul 25, 2018 10:00 PM</span>
-                    <span>Address: 140 Hwadamdira</span>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-plus"></i>
+                      <p>Filed -</p>
+                      Thu, Jul 19, 2018 7:30 PM
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-regular fa-calendar-days"></i>
+                      <p>Due -</p>
+                      Wed, Jul 25, 2018 10:00 PM
+                    </div>
+                    <div class="claim-info-icons">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <p>Address -</p>
+                      140 Hwadamdira
+                    </div>
                   </div>
                 </div>
                 <button class="view-btn">
@@ -353,21 +390,28 @@
             <div class="activity-feed-card">
               <h4 class="activity-title">ACTIVITY</h4>
               <ul class="activity-list">
-                <li><i class="fas fa-check-circle"></i> Claimed $2000</li>
                 <li>
-                  <i class="fas fa-check-circle"></i> 23 members are yet claimed
-                  in Washington DC
+                  Claimed $2000
+                  <p>23 members are yet claimed in Washington DC</p>
+                  <p>05.40pm</p>
                 </li>
-                <li><i class="fas fa-check-circle"></i> 102 New Members</li>
-                <li>
-                  <i class="fas fa-check-circle"></i> We have 102 registrations
+
+                <li class="selected-li">
+                  102 New Members
+                  <p>We have 102 registrations checkout their profiles</p>
+                  <p>05.40pm</p>
                 </li>
+
                 <li>
-                  <i class="fas fa-check-circle"></i> 3 Claims are waiting
+                  3 Claims are waiting
+                  <p>Please contribute them, they are waiting for your help</p>
+                  <p>05.40pm</p>
                 </li>
-                <li><i class="fas fa-check-circle"></i> 102 New Members</li>
+
                 <li>
-                  <i class="fas fa-check-circle"></i> We have 102 registrations
+                  102 New Members
+                  <p>We have 102 registrations</p>
+                  <p>05.40pm</p>
                 </li>
               </ul>
             </div>
