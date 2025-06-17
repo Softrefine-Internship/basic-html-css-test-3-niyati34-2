@@ -24,11 +24,15 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .dashboard-container {
   width: 100%;
-  max-width: 87.5em;
+  /* Remove max-width constraint for full responsiveness */
+  /* max-width: 87.5em; */
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -47,11 +51,14 @@ body {
   position: relative;
   height: 15.625em;
   background-image: url("images/mountain.jpg");
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.25em 2.5em;
+  width: 100%;
 }
 
 .top-bar {
@@ -138,6 +145,7 @@ body {
   position: relative;
   z-index: 2;
   margin-top: auto;
+  width: 100%;
 }
 
 .profile-pic-large-container {
@@ -255,7 +263,9 @@ body {
   font-weight: 500;
   z-index: 2;
 }
-
+.profile-text {
+  line-height: 1.5;
+}
 .profile-text h3 {
   margin: 0;
   font-size: 0.75em;
@@ -265,6 +275,7 @@ body {
 .profile-text p {
   font-size: 0.75em;
   color: #ccc;
+  margin-bottom: 10px;
 }
 
 .complete-btn {
@@ -286,6 +297,8 @@ body {
   display: flex;
   flex-grow: 1;
   background-color: var(--white);
+  width: 100%;
+  min-height: calc(100vh - 15.625em);
 }
 
 .sidebar {
@@ -350,11 +363,21 @@ body {
 
 .btn-claim {
   border: none;
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
   color: white;
   background-color: #17d69e;
-  padding: 0.3125em 0.625em;
-  border-radius: 0.1875em;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
   cursor: pointer;
+  font-size: 0.75em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-claim:hover {
+  background-color: #15c18e;
 }
 
 .user-details-section {
@@ -386,9 +409,11 @@ body {
   font-weight: 600;
 }
 
-.sidebar-heading p:last-child {
-  font-size: 1.5em;
+.sidebar-heading svg {
+  font-size: 0.5em;
   cursor: pointer;
+  height: 2.5em;
+  stroke: #444;
 }
 
 .avatar-group {
@@ -415,7 +440,7 @@ body {
   margin: 0.1875em 0;
   margin-bottom: 0.625em;
   font-size: 0.7em;
-  color: #474747;
+  color: #1e1e1e;
 }
 
 .dashboard-main {
@@ -424,6 +449,7 @@ body {
   padding-top: 1.25em;
   background-color: var(--white);
   font-family: roboto;
+  width: 100%;
 }
 
 .stats-cards {
@@ -431,6 +457,7 @@ body {
   justify-content: space-between;
   gap: 1.25em;
   margin-bottom: 1.875em;
+  flex-wrap: wrap;
 }
 
 .stat-card {
@@ -438,6 +465,7 @@ body {
   border-radius: 0.625em;
   padding: 0.9375em 1.25em;
   flex: 1;
+  min-width: 250px;
   text-align: center;
   box-shadow: 0 0.125em 0.5em var(--shadow-light);
   display: flex;
@@ -453,6 +481,7 @@ body {
 }
 
 .stat-number {
+  font-family: "Dosis";
   font-size: 2.7em;
   font-weight: 400;
   color: #333;
@@ -483,19 +512,27 @@ body {
   border: 0.125em solid white;
   margin-left: -0.625em;
   box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .stat-avatars img:first-child {
   margin-left: 0;
 }
 
+.stat-avatars img:last-child:hover {
+  transform: scale(1.1);
+}
+
 .claims-activity-row {
   display: flex;
   gap: 1.875em;
+  flex-wrap: wrap;
 }
 
 .claims-list {
   flex: 2;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 1.125em;
@@ -508,6 +545,7 @@ body {
   box-shadow: 0 0.125em 0.5em var(--shadow-light);
   display: flex;
   align-items: center;
+  align-items: flex-end;
   gap: 0.9375em;
 }
 
@@ -524,6 +562,7 @@ body {
 
 .claim-name {
   font-weight: 600;
+  font-family: "Dosis";
   font-size: 0.9em;
   color: #333;
   margin-bottom: 0.3125em;
@@ -553,20 +592,20 @@ body {
 }
 
 .view-btn {
-  margin-top: 3.75em;
   background-color: var(--primary-orange);
   border: none;
   font-size: 0.625em;
   border-radius: 0.1875em;
   color: rgba(255, 255, 255, 0.888);
-  padding: 0.3125em 0.625em;
+  padding: 0.7em 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.3125em;
+  gap: 0.4em;
   cursor: pointer;
   transition: background-color 0.2s ease;
   flex-shrink: 0;
+  font-weight: 500;
 }
 
 .view-btn i {
@@ -574,12 +613,21 @@ body {
   font-size: 1em;
 }
 
+.view-btn:hover {
+  background-color: #e69500;
+}
+
 .activity-feed-card {
   flex: 1;
+  min-width: 300px;
   background-color: var(--white);
   border-radius: 0.625em;
   padding: 0.9375em 1.25em;
   box-shadow: 0 0.125em 0.5em var(--shadow-light);
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .activity-title {
@@ -591,12 +639,34 @@ body {
   color: #a0a0a0;
   text-transform: uppercase;
   font-weight: 500;
+  flex-shrink: 0;
 }
 
 .activity-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 0.5em;
+}
+
+.activity-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.activity-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 .activity-list li {
@@ -677,6 +747,42 @@ body {
   color: #c2c2c2;
 }
 
+/* Enhanced responsive design */
+@media (max-width: 1200px) {
+  .stats-cards {
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    flex-basis: calc(50% - 0.625em);
+    min-width: 280px;
+  }
+
+  .claims-activity-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 968px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic-large-container {
+    margin-right: 0;
+    margin-bottom: 1em;
+    transform: translateY(1em);
+  }
+
+  .person-detail-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 1em;
@@ -708,6 +814,11 @@ body {
     gap: 1em;
   }
 
+  .stat-card {
+    flex-basis: 100%;
+    min-width: auto;
+  }
+
   .claims-activity-row {
     flex-direction: column;
     gap: 1.5em;
@@ -715,5 +826,34 @@ body {
 
   .dashboard-main {
     padding: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    padding: 0.75em 1em;
+    height: 10em;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .greeting {
+    font-size: 1.2em;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  .stat-number {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 0.0625em solid #cecece;
+    padding-bottom: 0.5em;
   }
 }
